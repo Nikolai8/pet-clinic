@@ -28,6 +28,6 @@ jobs:
     - name: Compile, build and push
       run: |
         mvn package
-        docker build --tag ghcr.io/Nikolai8/petclinic:latest -f Dockerfile .
+        docker build --tag ghcr.io/nikolai8/petclinic:latest -f Dockerfile .
         docker login --username nikolai8 --password ${{ secrets.REGISTRY_TOKEN }} ghcr.io
-        docker push ghcr.io/Nikolai8/petclinic:latest
+        docker push ghcr.io/nikolai8/petclinic:latest
