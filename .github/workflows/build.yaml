@@ -17,8 +17,13 @@ jobs:
         distribution: temurin
         java-version: 11
         cache: maven
-    #### AUFGABE 2: SONAR
-      # hier ist der Platz für die Konfiguration der Sonar Analyse
+   
+    #- name: Cache Maven packages
+    #  uses: actions/cache@v1
+    #  with:
+    #    path: ~/.m2
+    #    key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
+    #    restore-keys: ${{ runner.os }}-m2
   
     - name: Compile, build and push
       run: |
