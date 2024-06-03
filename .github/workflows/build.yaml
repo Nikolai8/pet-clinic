@@ -29,5 +29,5 @@ jobs:
       run: |
         mvn package
         docker build --tag ghcr.io/Nikolai8/petclinic:latest -f Dockerfile .
-        docker login --username Nikolai8 --password ${{ secrets.REGISTRY_TOKEN }} ghcr.io
+        docker login --username nikolai8 --password ${{ secrets.REGISTRY_TOKEN }} ghcr.io
         docker push ghcr.io/Nikolai8/petclinic:latest
